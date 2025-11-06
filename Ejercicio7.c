@@ -1,26 +1,40 @@
 /*Schrader Rodríguez Luis Antonio
 Practica 10 Programa 7*/
 
-#include<stdio.h>
+#include <stdio.h>
 
-int main()
+int main ()
 {
-  int i,j,a[5][5];
+  int lista[10][10]; // Se declara el arreglo multidimensional
+  int i,j;
+  int renglon,columna;
+  printf("\nDa el número de renglones y columnas separados con coma, ");
+  printf("cuyo valor no sea mayor a 10 ");
+  scanf("%d,%d",&renglon,&columna);
   
-  i=0;
-  do //Representa al renglón del arreglo
+  if(((renglon>=1) && (renglon<=10))&&((columna>=1) && (columna<=10)))
   {
-    j=0;
-    do //Representa a la columna del arreglo
+  // Acceso a cada elemento del arreglo multidimensional usando for
+    for (i= 0 ; i <= renglon-1 ; i++)
     {
-      a[i][j]=i+j;
-      printf("\t%d, ",a[i][j]);
-      j++;
+      for(j= 0 ; j <= columna-1 ; j++)
+      {
+        printf("\nNúmero para el elemento [%d][%d] del arreglo ", i,j );
+        scanf("%d",&lista[i][j]);
+      }
     }
-    while (j<5);
-    printf("\n");
-    i++;
+    printf("\nLos valores dados son: \n");
+    // Acceso a cada elemento del arreglo multidimensional usando for
+    for (i= 0 ; i <= renglon-1 ; i++)
+    {
+      for(j= 0 ; j <= columna-1 ; j++)
+      {
+        printf("%d ", lista[i][j]);
+      }
+      printf("\n");
+    }
   }
-  while (i<5);
+  else printf("Los valores dados no es válido");
+  printf("\n");
   return 0;
 }
