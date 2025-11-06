@@ -1,5 +1,5 @@
 /*Schrader Rodríguez Luis Antonio
-Practica 10 Programa 1*/
+Practica 10 Programa 5*/
 
 #include<stdio.h>
 
